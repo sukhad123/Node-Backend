@@ -1,4 +1,4 @@
-// Filename - index.js
+ 
 
 // Importing the required modules
 const http = require("http");
@@ -90,12 +90,12 @@ app.post('/filter', (req, res) => {
             return res.status(500).json({ message: 'Database error' });
         }
 
-        res.json(rows); // Return the filtered rows
+        res.json(rows); //  
     });
 });
 
 app.get("/", (req,res)=> {
-res.json("hi");
+<h1>Welcome</h1>
 });
 // Creating the HTTP server
 const server = http.createServer(app);
