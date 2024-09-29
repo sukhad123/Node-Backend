@@ -51,7 +51,7 @@ app.get('/getall', (req, res) => {
         if (err) {
             return res.status(500).json({ error: err.message }); // Send error response
         }
-        res.json(rows); // Respond with the retrieved rows
+        res.json(rows);  
     });
 });
 
@@ -94,11 +94,13 @@ app.post('/filter', (req, res) => {
     });
 });
 
-
+app.get("/", (req,res)=> {
+res.json("hi");
+});
 // Creating the HTTP server
 const server = http.createServer(app);
 
 // Server listening to port 3000
 server.listen(8080, () => {
-    console.log("Server is Running on http://localhost:3000");
+    console.log("Server is Running on http://localhost:8080");
 });
